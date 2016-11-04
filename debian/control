@@ -9,6 +9,6 @@ Package: spintest
 Provides: spintest
 Conflicts: spintest
 Replaces: spintest
-Architecture: all
+Architecture: any
 Depends: nginx
 Description: spintest lorem ipsum.
