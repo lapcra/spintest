@@ -4,6 +4,7 @@ case "$1" in
    configure)
     # (instructions which config, make and install the freshly installed source code)
     if [ -e "/etc/nginx/nginx.conf" ]; then
+       rm /etc/nginx/sites-enabled/default
        service nginx restart 
     else
        echo "Nginx not installed"
