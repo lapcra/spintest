@@ -1,0 +1,18 @@
+#!/bin/sh
+set -e
+case "$1" in
+   configure)
+    # (instructions which config, make and install the freshly installed source code)
+    if [ -e "/etc/nginx/nginx.conf" ]; then
+       service nginx restart 
+    else
+       echo "Nginx not installed"
+    fi
+    echo "Nginx restarted complete"
+   ;;
+   *)
+    echo "postinst called with unknown argument '$1'" >&2
+   ;;
+esac
+# exit 1 to ensure installer stalls
+exit 1
